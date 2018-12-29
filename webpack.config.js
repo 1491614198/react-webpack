@@ -65,6 +65,9 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.ProvidePlugin({
+      identifier: ['react', 'react-dom'],
+    }),
     new HtmlWebpackPlugin({
       title: 'React App',
       filename: 'index.html',
